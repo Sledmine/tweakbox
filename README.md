@@ -11,3 +11,6 @@ and they must work.**
   Provides reverberation for sounds that does not have it by default like melee, reload, grenade throw.
 - **FP Animation Permutation**:
   Reimplements first person animation permutation by using the OpenSauce animation label format.
+
+## WARNING!!
+**Most of these files are using tag paths to do their work so they are not supposed to work on protected maps.**
