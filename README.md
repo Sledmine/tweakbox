@@ -8,7 +8,7 @@ and they must work.**
 
 ## Available scripts:
 - **Dynamic Reverb Sound**:
-  Provides reverberation for sounds that does not have it by default like melee, reload, grenade throw.
+  Provides reverberation for sounds that does not have it by default like melee, reload, ready and grenade throw.
 - **FP Animation Permutation**:
   Reimplements first person animation permutation by using the OpenSauce animation label format.
 
