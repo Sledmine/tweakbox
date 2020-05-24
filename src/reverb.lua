@@ -2,7 +2,7 @@
 -- Reverb
 -- On the fly sound class patch for reverberation sounds
 -- Author: Sledmine
--- Version: 2.0
+-- Version: 2.1
 ------------------------------------------------------------------------------
 
 clua_version = 2.042

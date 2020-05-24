@@ -9,10 +9,13 @@ for Chimera.
 - **FP Animation Permutation**:
   Reimplements first person animation permutation by using the OpenSauce animation label format.
 
+## Changelog
+
+There is changelog markdown file here in this repository to checkout changes for every script version.
+
 ## Warning
 
 - Most of these files are using tag paths to do their work so they are not supposed to work on protected maps.
-
 
 - All the scripts in root are release files, you can drag and drop it in your global scripts folder and they must work.
 

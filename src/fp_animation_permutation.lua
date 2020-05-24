@@ -2,8 +2,7 @@
 -- FP Animation Permutation
 -- First persons animation permutation using OpenSauce label format
 -- Author: Sledmine
--- Version: 2.0
--- Not deeply tested, be careful!
+-- Version: 2.1
 ------------------------------------------------------------------------------
 clua_version = 2.042
 
@@ -58,7 +57,6 @@ local animationTable = {
 }
 
 function onTimer()
-    -- console_out('Randomizing animation!')
     for animationTagId, animationPermutations in pairs(permutableAnimations) do
         local weaponModelAnimations = blam.modelAnimations(
                                           get_tag(animationTagId))
@@ -81,13 +79,13 @@ function onMapLoad()
     -- Look for tags
     for tagId = 0, get_tags_count() - 1 do
         -- Get curren tag type
-        local type = get_tag_type(tagId)
+        local tagType = get_tag_type(tagId)
         -- We are looking for model animation tags
-        if (type == tagClasses.modelAnimations) then
+        if (tagType and tagType == tagClasses.modelAnimations) then
             -- Get current tag path
             local tagPath = get_tag_path(tagId)
             -- We are looking for weapon animation tags
-            if (tagPath:find('weapon')) then
+            if (tagPath and tagPath:find('weapon')) then
                 dprint(tagPath)
                 -- Get tag animations data
                 local modelAnim = blam.modelAnimations(get_tag(tagId))
