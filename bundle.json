@@ -1,0 +1,12 @@
+{
+    "name": "FP Animation Permutation",
+    "target": "lua53",
+    "include": [
+    ],
+    "modules": [
+        "glue",
+        "blam"
+    ],
+    "main":"src\\fp_animation_permutation",
+    "output": "fp_animation_permutation.lua"
+}
