@@ -4,8 +4,6 @@ Different files for fixing/tweaking/restoring Halo Custom Edtion functionality m
 for Chimera.
 
 ## Available scripts
-- **Dynamic Reverb Sound**:
-  Provides reverberation for sounds that does not have it by default like melee, reload, ready and grenade throw.
 - **FP Animation Permutation**:
   Reimplements first person animation permutation by using the OpenSauce animation label format.
 
