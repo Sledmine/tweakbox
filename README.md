@@ -7,6 +7,10 @@ for Chimera.
 - **FP Animation Permutation**:
   Reimplements first person animation permutation by using the OpenSauce animation label format.
 
+## Removed scripts
+- **Dynamic Reverb Sound**:
+  This script has been removed due to Chimera adding reverbed sounds in a more natural way
+
 ## Changelog
 
 There is changelog markdown file here in this repository to checkout changes for every script version.
