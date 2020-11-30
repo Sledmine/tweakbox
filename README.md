@@ -19,6 +19,6 @@ There is changelog markdown file here in this repository to checkout changes for
 
 - Most of these files are using tag paths to do their work so they are not supposed to work on protected maps.
 
-- All the bundled scripts are the release tab, you can drag and drop it in your global scripts folder and they must work.
+- All the bundled scripts are in the release tab, you can drag and drop it in your global scripts folder and they must work.
 
 - Scripts in the src folder are for developing and they need to be bundled with other libraries to work.
