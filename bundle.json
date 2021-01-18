@@ -2,6 +2,7 @@
     "name": "FP Animation Permutation",
     "target": "lua53",
     "include": [
+        "modules\\"
     ],
     "modules": [
         "blam"
