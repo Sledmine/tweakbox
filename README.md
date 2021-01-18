@@ -25,5 +25,5 @@ You can check out the [changelog](CHANGELOG.md) for every script on the reposito
 
 ## Warning
 - Most of these files are using tag paths to do their work so they are not supposed to work on protected maps.
-- All the bundled scripts are in the release tab, you can drag and drop it in your global scripts folder and they must work.
-- Scripts in the src folder are for developing and they need to be bundled with other libraries to work.
+- Scripts in every source folder are for developing and they need to be bundled with other modules to work.
+- All the bundled scripts are in the root of the repository, you can drag and drop them in your global scripts folder and they should work.
