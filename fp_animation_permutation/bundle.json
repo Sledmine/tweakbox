@@ -8,5 +8,5 @@
         "blam"
     ],
     "main":"fp_animation_permutation",
-    "output": "..\\fp_animation_permutation.lua"
+    "output": "..\\bundled\\fp_animation_permutation.lua"
 }
