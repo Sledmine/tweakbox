@@ -1,43 +1,44 @@
 ------------------------------------------------------------------------------
 -- FP Animation Permutation
+-- Sledmine
 -- First persons animation permutation using OpenSauce label format
--- Author: Sledmine
--- Version: 2.1
+-- Version 1.0.0
 ------------------------------------------------------------------------------
+-- local inspect = require "inspect"
+-- local glue = require "glue"
+local blam = require "blam"
+local tagClasses = blam.tagClasses
+local objectClasses = blam.objectClasses
+
 clua_version = 2.042
 
 local keepTimer = true
 local debugMode = false
 local permutatorTimer
 
-local blam = require "blam"
-local tagClasses = blam.tagClasses
-local objectClasses = blam.objectClasses
-console_out = blam.consoleOutput
-
-local glue = require "glue"
-local inspect = require "inspect"
-
 --- Function to send debug messages to console output
----@param message string
----@param color '"string"' | '"category"' | '"warning"' | '"error"' | '"success"'
+---@param message string | table
 function dprint(message, color)
-    if (type(message) ~= "string") then
-        message = inspect(message)
-    end
     if (debugMode) then
-        if (color == "category") then
-            console_out(message, 0.31, 0.631, 0.976)
-        elseif (color == "warning") then
-            console_out(message, blam.consoleColors.warning)
-        elseif (color == "error") then
-            console_out(message, blam.consoleColors.error)
-        elseif (color == "success") then
-            console_out(message, blam.consoleColors.success)
+        if (type(message) == "string") then
+            console_out(tostring(message))
         else
-            console_out(message)
+            console_out(inspect(message))
         end
     end
+end
+
+--- Update a table with the contents of other table(s).
+function update(dt, ...)
+    for i = 1, select("#", ...) do
+        local t = select(i, ...)
+        if t then
+            for k, v in pairs(t) do
+                dt[k] = v
+            end
+        end
+    end
+    return dt
 end
 
 -- List of all the weapon permutable animations in current map
@@ -71,26 +72,28 @@ function OnTimer()
             local tempTag = blam.getTag(tagIndex)
             local animationsTag = blam.modelAnimations(tagIndex)
             if (animationsTag) then
-                local newFpAnimationList = glue.update({}, animationsTag.fpAnimationList)
+                local newFpAnimationList = update({}, animationsTag.fpAnimationList)
                 for classValue, permutableValues in pairs(permAnimationClasses) do
-                    dprint(glue.index(animationClasses)[classValue])
+                    -- dprint(glue.index(animationClasses)[classValue])
                     newFpAnimationList[classValue] =
                         math.random(permutableValues[1], permutableValues[#permutableValues])
                 end
                 local animationsTag = blam.modelAnimations(tagIndex)
                 animationsTag.fpAnimationList = newFpAnimationList
-                dprint(animationsTag.fpAnimationList)
+                -- dprint(animationsTag.fpAnimationList)
             end
         end
     end
     return true
 end
 
-function mapPermutableAnimations(tagIndex, animationLabel, animationIndex)
+function mapPermutableAnimations(tagIndex, animationLabel, animationIndex, tagPath)
     -- Find permutable animations
+
     if (animationLabel:find("%%")) then
-        dprint("Found permutable animation!", "success")
+        dprint("Found permutable animation!")
         dprint(animationLabel)
+        dprint(tagPath)
 
         -- Store space for this animation if doesn't exist
         if (not availableAnimations[tagIndex]) then
@@ -128,14 +131,14 @@ function OnMapLoad()
         -- We are looking for model animation tags
         if (tempTag and tempTag.class == tagClasses.modelAnimations) then
             -- We are looking for weapon animation tags
-            if (tempTag.path and tempTag.path:find("weapon")) then
+            if (tempTag.path and tempTag.path:find("")) then
                 -- Get tag animations data
                 local animationsTag = blam.modelAnimations(tagIndex)
                 if (animationsTag) then
-                    dprint(tempTag.path)
                     -- Iterate through animation list
                     for animationIndex, animation in pairs(animationsTag.animationList) do
-                        mapPermutableAnimations(tagIndex, animation.name, animationIndex)
+                        mapPermutableAnimations(tagIndex, animation.name, animationIndex,
+                                                tempTag.path)
                     end
                 end
             end
@@ -161,4 +164,4 @@ set_callback("unload", "OnMapUnload")
 
 -- Run function after loading script
 -- This is to test script changes after reloading script
--- OnMapLoad()
+OnMapLoad()
