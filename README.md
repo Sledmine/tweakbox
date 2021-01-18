@@ -10,7 +10,7 @@ for Chimera.
 
 # Building
 Some of the scripts on this repository are modular projects that need to be bundled with other lua
-modules to work, you can bundle them using [Mercury](https://github.com/Sledmine/Mercury) using the
+modules to work, you can bundle them with [Mercury](https://github.com/Sledmine/Mercury) using the
 following commands:
 
 ```
