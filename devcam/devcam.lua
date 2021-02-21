@@ -1,6 +1,7 @@
 ------------------------------------------------------------------------------
 -- Devcam
 -- Sledmine (https://github.com/Sledmine)
+-- Version 1.0.0
 -- Devcam utilities for Halo Custom Edition
 ------------------------------------------------------------------------------
 clua_version = 2.056
@@ -25,7 +26,7 @@ function OnTick()
     -- Get current debug camera velocity
     local currentCameraSpeed = read_float(cameraSpeedAddress)
 
-    -- Get "z" and "x" keys pressed time from keyboard
+    -- Get time pressed for "z" and "x" keys
     local zKey = read_byte(keyboardInputAddress + 58)
     local yKey = read_byte(keyboardInputAddress + 59)
 

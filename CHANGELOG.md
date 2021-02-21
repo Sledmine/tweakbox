@@ -1,6 +1,10 @@
-# Changelog
 
-## FP Animation Permutation
+# FP Animation Permutation
 
-### 1.0.0
+## 1.0.0
+- Initial release
+
+# Devcam
+
+## 1.0.0
 - Initial release

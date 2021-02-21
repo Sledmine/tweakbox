@@ -18,7 +18,7 @@ This will create a bundled script on the root of the repository that is distribu
 
 
 # Changelog
-You can check out the [changelog](CHANGELOG.md) for every script on the repository.
+You can check out the [changelog](CHANGELOG.md) for scripts from this repository.
 
 ## Warning
 - Most of these files are using tag paths to do their work so they are not supposed to work on protected maps.
