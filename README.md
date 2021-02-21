@@ -3,13 +3,8 @@
 Different files for fixing/tweaking/restoring Halo Custom Edtion functionality mainly based in Lua scripts
 for Chimera.
 
-# Hosted scripts
-- **FP Animation Permutation**:
-  Reimplements first person animation permutation by using the OpenSauce animation label format.
-
-
 # Building
-Some of the scripts on this repository are modular projects that need to be bundled with other lua
+Some scripts on this repository are modular projects that need to be bundled with other lua
 modules to work, you can bundle them with [Mercury](https://github.com/Sledmine/Mercury) using the
 following commands:
 
@@ -17,8 +12,10 @@ following commands:
 cd fp_animation_permutation
 mercury luabundle
 ```
-
 This will create a bundled script on the root of the repository that is distributable and functional.
+
+**NOTE:** If the script folder has a `bundle.json` file on it, it is indeed a bundeable script.
+
 
 # Changelog
 You can check out the [changelog](CHANGELOG.md) for every script on the repository.
