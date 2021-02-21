@@ -28,7 +28,7 @@ function OnTick()
 
     -- Get time pressed for "z" and "x" keys
     local zKey = read_byte(keyboardInputAddress + 58)
-    local yKey = read_byte(keyboardInputAddress + 59)
+    local xKey = read_byte(keyboardInputAddress + 59)
 
     if (isDevcam) then
         -- Get pressed key
@@ -38,7 +38,7 @@ function OnTick()
                 write_float(cameraSpeedAddress, currentCameraSpeed + cameraSpeedStep)
             end
             printCameraSpeed()
-        elseif (yKey > 0) then
+        elseif (xKey > 0) then
             -- Minimum camera speed should be something greater than 0
             if (currentCameraSpeed > 0 and currentCameraSpeed > cameraSpeedStep) then
                 write_float(cameraSpeedAddress, currentCameraSpeed - cameraSpeedStep)
