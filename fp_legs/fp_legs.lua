@@ -230,6 +230,13 @@ function OnTick()
 						write_f32(weapon + 0x64, -100)
 						set_timer(33, "DeleteObject", weapon_ID)
 					end
+
+					-- Assign player id, helps other scripts tell this is player object (needs review)
+					local m_player = get_player()
+					if (m_player) then
+						player_id = read_word(m_player)
+						write_word(legs + 0xC0, player_id)
+					end
 					
 					--Make legs invisible to AI
 					write_float(legs + 0x2E0, 0)
