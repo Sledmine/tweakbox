@@ -1,3 +1,9 @@
+------------------------------------------------------------------------------
+-- First Person Legs
+-- aLTis, (tweaks and semantic versioning by Sledmine)
+-- First person legs implementation using a biped copy
+-- Version 1.0.0
+------------------------------------------------------------------------------
 clua_version = 2.042
 
 -- First person legs script by aLTis (altis94@gmail.com, aLTis#3828)

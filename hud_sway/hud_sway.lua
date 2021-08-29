@@ -1,3 +1,9 @@
+------------------------------------------------------------------------------
+-- HUD Sway
+-- aLTis, (tweaks and semantic versioning by Sledmine)
+-- HUD sway effect based on player velocity and movement
+-- Version 1.0.0
+------------------------------------------------------------------------------
 -- version 0.15 (by aLTis)
 
 --CONFIG

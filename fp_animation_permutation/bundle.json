@@ -7,6 +7,6 @@
     "modules": [
         "blam"
     ],
-    "main":"fp_animation_permutation",
-    "output": "..\\bundled\\fp_animation_permutation.lua"
+    "main":"fp_animation_permutation\\fp_animation_permutation",
+    "output": "..\\dist\\fp_animation_permutation.lua"
 }
