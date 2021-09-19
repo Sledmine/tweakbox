@@ -2,7 +2,7 @@
 -- First Person Legs
 -- aLTis, (tweaks and semantic versioning by Sledmine)
 -- First person legs implementation using a biped copy
--- Version 1.0.0
+-- Version 1.0.1
 ------------------------------------------------------------------------------
 clua_version = 2.042
 
@@ -15,7 +15,7 @@ clua_version = 2.042
 	fp_legs_enabled = true
 
 	tag_type = "bipd" 			-- for spv3 use "weap", else use "bipd"
-	offset_from_camera = 7 		-- recommended 4-7, depends on player's FOV
+	offset_from_camera = 6.5 		-- recommended 4-7, depends on player's FOV
 	velocity_offset = 0 		-- from 0 to 1. How close legs stay behind the player when player moves
 	torso_offset = 1.2 		-- how far back is the torso of the body. higher means less clipping in but worse shadow (should be 1.2)
 	biped_radius = 10 			-- render radius

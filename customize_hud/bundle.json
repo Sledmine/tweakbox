@@ -1,0 +1,14 @@
+{
+    "target": "lua53",
+    "output": "dist/customize_hud.lua",
+    "main": "customize_hud",
+    "include": [
+        "../modules/"
+    ],
+    "name": "Customize HUD",
+    "modules": [
+        "blam",
+        "tinyyaml",
+        "color"
+    ]
+}
